@@ -8,7 +8,7 @@ class Content extends React.Component {
         return (
             <div style={{
                 paddingTop: "100px",
-                minHeight: "calc(100% - 100px)",
+                minHeight: "calc(100% - 100px - 50px)",
                 backgroundColor: oliveDrab
             }} >
                 <div style={{
@@ -16,6 +16,10 @@ class Content extends React.Component {
                     flexDirection: "column",
                     padding: "20px"
                 }} >
+                    <Requests />
+                    <div style={{flexBasis: "20px"}}/>
+                    <OpportunityMonitor />
+                    <div style={{flexBasis: "20px"}}/>
                     <Requests />
                     <div style={{flexBasis: "20px"}}/>
                     <OpportunityMonitor />

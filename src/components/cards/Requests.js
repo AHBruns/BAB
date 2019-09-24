@@ -1,5 +1,5 @@
 import React from 'react'
-import {sage, ochre, darkScarlet} from  '../../colors'
+import {sage, ochre, darkScarlet, frenchBistre} from  '../../colors'
 
 class Requests extends React.Component {
     constructor(props) {
@@ -8,23 +8,32 @@ class Requests extends React.Component {
             requests: [
                 {
                     status: "success",
+                    http: "POST",
                     endpoint: "/get/blah",
-                    timestamp: 1569246291
+                    timestamp: 1569246291,
+                    body: "{\"blah\": \"blah\"}"
                 },
                 {
                     status: "failure",
-                    endpoint: "/get/blah",
-                    timestamp: 1569246291
+                    http: "POST",
+                    endpoint: "/get/blah/",
+                    timestamp: 1569246291,
+                    body: "{\"blah\": \"blah\"}"
                 },
                 {
                     status: "success",
+                    http: "POST",
                     endpoint: "/get/blah",
-                    timestamp: 1569246291
+                    timestamp: 1569246291,
+                    body: "{\"blah\": \"blah\", \"blah\": \"blah\", \"blah\": \"blah\", \"blah\": \"blah\", \"blah\": \"blah\", \"blah\": \"blah\", \"blah\": \"blah\", \"blah\": \"blah\", \"blah\": \"blah\", \"blah\": \"blah\"}"
+
                 },
                 {
                     status: "success",
+                    http: "POST",
                     endpoint: "/get/blah",
-                    timestamp: 1569246291
+                    timestamp: 1569246291,
+                    body: "{\"blah\": \"blah\"}"
                 },
             ]
         }
@@ -33,7 +42,7 @@ class Requests extends React.Component {
     render() {
         return(
             <div style={{
-                backgroundColor: sage,
+                backgroundColor: ochre,
                 // height: "500px",
                 boxShadow: "0 3px 4px 0 rgba(0, 0, 0, .1), 0 5px 7px 0 rgba(0, 0, 0, .25), inset 0 -1px 2px rgba(0, 0, 0, .15)",
                 borderRadius: "10px",
@@ -76,7 +85,8 @@ class Requests extends React.Component {
                                         alignItems: "center",
                                         fontFamily: "'Work Sans', sans-serif",
                                         borderRadius: "3px",
-                                        flexWrap: "wrap"
+                                        flexWrap: "wrap",
+                                        "alignItems": "flex-start"
                                     }} >
                                         <h5 style={{
                                             margin: "0",
@@ -93,6 +103,18 @@ class Requests extends React.Component {
                                         </h5>
                                         <h5 style={{
                                             margin: "0",
+                                            marginRight: "10px",
+                                            backgroundColor: "rgba(0, 0, 0, 0.5",
+                                            padding: "10px",
+                                            borderRadius: "3px",
+                                            textAlign: "center",
+                                            border: "1px solid black",
+                                            color: "white"
+                                        }} >
+                                            {request.http}
+                                        </h5>
+                                        <h5 style={{
+                                            margin: "0",
                                             flex: "1",
                                             padding: "10px",
                                             borderRadius: "3px",
@@ -102,6 +124,18 @@ class Requests extends React.Component {
                                             marginRight: "10px"
                                         }} >
                                             {request.endpoint}
+                                        </h5>
+                                        <h5 style={{
+                                            margin: "0",
+                                            flex: "3",
+                                            padding: "10px",
+                                            borderRadius: "3px",
+                                            border: "1px solid black",
+                                            backgroundColor: "rgba(0, 0, 0, 0.5)",
+                                            color: "white", // request.status == "success" ? "green" : "red",
+                                            marginRight: "10px"
+                                        }} >
+                                            {request.body}
                                         </h5>
                                         <h5 style={{
                                             margin: "0",

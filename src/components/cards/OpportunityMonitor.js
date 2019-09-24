@@ -75,7 +75,7 @@ class OpportunityMonitor extends React.Component {
     render() {
         return (
             <div style={{
-                backgroundColor: sage,
+                backgroundColor: ochre,
                 // height: "500px",
                 boxShadow: "0 3px 4px 0 rgba(0, 0, 0, .1), 0 5px 7px 0 rgba(0, 0, 0, .25), inset 0 -1px 2px rgba(0, 0, 0, .15)",
                 borderRadius: "10px",
